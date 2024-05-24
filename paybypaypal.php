@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/paypal.css" />
+    <link rel="stylesheet" href="css/dropdown.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navigation" id="navbarNavAltMarkup">
+                <div class="navbar-nav"> <a class="nav-link active" href="index.php">Home</a>
+                    <a class="nav-link" href="countries.php">Countries</a>
+                    <a class="nav-link" href="process.php">Process</a>
+                    <a class="nav-link" href="news.php">news</a>
+                    <a class="nav-link" href="recent-export.php">Recent </a>
+
+                    <div class="dropdown nav-link">
+                        <button class="dropbtn">How to Buy</button>
+                        <div class="dropdown-content">
+                            <a class="nav-link" href="howtobuy.php">How To Buy </a>
+                            <a class="nav-link" href="paybypaypal.php">Pay by Paypal </a>
+                            <a class="nav-link" href="Faq.html">FAQ </a>
+                            <a class="nav-link" href="Bank details.html">Bank Details </a>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <a href="contactus.php"> <button class="nav-button">contact us</button></a>
+        </div>
+    </nav>
+
+
+    <div class="border-red-top pt-4 pb-4 main-div">
+        <div class="container-pp">
+
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="h2">Pay by Pay Pal</h1>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-7 order2">
+                    <form action-xhr="/pay-by-paypal" class="form-horizontal i-amphtml-form" target="_top" method="post" on="submit: submitPayPal.hide; submit-error: submitPayPal.show" custom-validation-reporting="interact-and-submit" novalidate="">
+                        <div submit-error="">
+                            <template type="amp-mustache">
+                                <div class="alert alert-danger">
+                                    <strong>There was a problem while redirecting you to PayPal. Please contact us directly at <a href="mailto: contact@aajapancars.com">contact@aajapancars.com</a>.</strong>
+                                </div>
+                            </template>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">First Name</label>
+                                <input class="form-control" id="FirstName" name="FirstName" placeholder="First Name *" required="required" type="text" value="">
+
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Last Name</label>
+                                <input class="form-control" id="LastName" name="LastName" placeholder="Last Name *" required="required" type="text" value="">
+                                <span visible-when-invalid="valueMissing" validation-for="LastName">
+                                    Please enter your last name
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Payment For </label>
+                                <textarea class="form-control text-area" cols="20" id="PaymentObject" name="PaymentObject" placeholder="Please enter useful information to track your Payment (i.e Stock-ID,Chassis # and/or Proforma #)*" required="required" rows="2"></textarea>
+
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Amount (including 6.6% PayPal fees)</label>
+                                <input id="TotalAmount" name="TotalAmount" class="form-control" placeholder="Total Amount*" required="" on="change: AMP.setState({ Amount: round(event.value * 0.934) })" [value]="TotalAmount">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Net Amount (USD)</label>
+                                <input id="Amount" name="Amount" class="form-control" placeholder="Amount*" required="" [value]="Amount" on="change: AMP.setState({ TotalAmount: round(event.value / 0.934) })">
+
+                            </div> 
+                             <a  href="https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-1YJ885607N204792X" class=" btn background-primary float-right "> Pay Now </a>
+
+                            <!-- <input type="submit" id="submitPayPal" class="btnn background-primary float-right" value="Pay Now"> -->
+                            <div submitting="">
+                                <template type="amp-mustache">
+                                    <span class="text-success">Redirecting to Paypal, please wait...</span>
+                                </template>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-5 order1 mb-3">
+
+                    <div>
+                        <h2 class="h5">PayPal uses the latest anti-fraud technology and doesn't share your financial informations with merchants </h2>
+                    </div>
+                    <div class="mt-5">
+                        <img class="img-fluid w-50 mx-auto d-block lazyload" src="./picture/download (1).jpeg">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="zindex">
+            <div class="one">
+
+                <h4><strong>Experienced Service </strong></h4>
+                <div class="last-three"> <img src="./images/usp-icon-star.svg" class="imagecenter">&nbsp;&nbsp;&nbsp;
+                    <p> Experienced service with over two<br> decades of experience
+                        combined,<br> our team can deal with your every<br> need.</p>
+                </div>
+            </div>
+            <div class="two">
+                <h4><strong>Global Vehicle Export</strong></h4>
+                <div class="last-three"><img src="./images/usp-icon-star.svg" class="imagecenter">&nbsp;&nbsp;&nbsp;
+                    <p> Global vehicle export – we <br>have trusted logistical
+                        <br>partners to serve your needs<br> internationally.
+                    </p>
+                </div>
+            </div>
+            <div class="three">
+                <h4><strong>Reputable Source </strong> </h4>
+                <div class="last-three"><img class="imagecenter" src="./images/usp-icon-star.svg">&nbsp;&nbsp;&nbsp;
+                    <p>Reputable source – we have<br> satisfied customers
+                        globally<br> that we have worked with for<br> a decade.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class=footerwork>
+            <img src="./images/logo.png" width="300" height="300">
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+
+</html>

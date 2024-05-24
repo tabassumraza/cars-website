@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AA Japan FAQ</title>
+    <link rel="stylesheet" href="css/dropdown.css" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        color: #000000;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-around;
+        background-color: #d32f2f;
+        padding: 10px;
+        width: 100%;
+      }
+
+      .navbar button {
+        background-color: #d32f2f;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      .navbar button:hover {
+        background-color: #c12727;
+      }
+
+      .navbar button.active {
+        background-color: #b12727;
+      }
+
+      .content {
+        display: none;
+        margin-top: 20px;
+        width: 60%;
+      }
+
+      .content.active {
+        display: block;
+      }
+
+      .general-info {
+        margin-top: 20px;
+        width: 40%;
+        padding-left: 20px;
+        border-left: 1px solid #ddd;
+      }
+
+      .languages span {
+        display: inline-block;
+        background-color: #eee;
+        padding: 5px 10px;
+        margin: 5px;
+        border-radius: 3px;
+        background-color: #d32f2f;
+        color: white;
+      }
+
+      .general-info ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .general-info ul li {
+        padding: 5px 0;
+      }
+
+      .general-info a {
+        color: #d32f2f;
+        text-decoration: none;
+      }
+
+      .general-info a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .navbar button {
+          margin-bottom: 5px;
+          width: 100%;
+        }
+
+        .content,
+        .general-info {
+          width: 100%;
+          padding: 0;
+          margin: 0;
+        }
+
+        .general-info {
+          border-left: none;
+          padding-top: 20px;
+        }
+      }
+
+      .question {
+        cursor: pointer;
+        color: #d32f2f;
+        margin: 10px 0;
+        font-weight: bold;
+      }
+
+      .answer {
+        display: none;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse navigation"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav">
+            <a class="nav-link active" href="index.php">Home</a>
+            <a class="nav-link" href="countries.php">Countries</a>
+            <a class="nav-link" href="process.php">Process</a>
+            <a class="nav-link" href="news.php">news</a>
+            <a class="nav-link" href="recent-export.php">Recent </a>
+
+            <div class="dropdown nav-link">
+              <button class="dropbtn">How to Buy</button>
+              <div class="dropdown-content">
+                <a class="nav-link" href="howtobuy.php">How To Buy </a>
+                <a class="nav-link" href="paybypaypal.php">Pay by Paypal </a>
+                <a class="nav-link" href="Faq.html">FAQ </a>
+                <a class="nav-link" href="Bank details.html">Bank Details </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="contactus.php">
+          <button class="nav-button">contact us</button></a
+        >
+      </div>
+    </nav>
+    <div class="container">
+      <div class="navbar">
+        <a href="Faq.html"> <button class="tablink">FAQ</button></a>
+        <a href="VehiclesAndStock.html">
+          <button class="tablink">Vehicles & Stocks</button></a
+        >
+        <a href="Payment.html"> <button class="tablink">Payment</button></a>
+        <a href="shipping.html"> <button class="tablink">Shipping</button></a>
+        <a href="documents.html"> <button class="tablink">Documents</button></a>
+        <a href="glossary.html"> <button class="tablink">Glossary</button></a>
+      </div>
+
+      <div class="content-section">
+        <div id="FAQ" class="content active">
+          <h2>FAQ</h2>
+          <div id="ShippingFAQ" class="faq-section">
+            <h3>Shipping</h3>
+            <p class="question" onclick="toggleAnswer(event)">
+              What information are needed to start the shipping process?
+            </p>
+            <p class="answer">
+              We need the consignee details, delivery address, and any specific
+              instructions related to the shipment.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              Are pre-export inspections required?
+            </p>
+            <p class="answer">
+              Yes, pre-export inspections are required for certain countries.
+              Please check with your local authorities for specific
+              requirements.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              How long does it takes for the shipping vessel to reach the port
+              of discharge?
+            </p>
+            <p class="answer">
+              Shipping time varies depending on the destination. It usually
+              takes between 2 to 8 weeks.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              How can I get information regarding my shipping?
+            </p>
+            <p class="answer">
+              You will receive updates via email, and you can also track the
+              shipment on our website.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              Is there any possibility that the shipping schedule will change?
+            </p>
+            <p class="answer">
+              Yes, shipping schedules can change due to various factors like
+              weather conditions or port congestion.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              Why is the shipping vessel's ETA blank?
+            </p>
+            <p class="answer">
+              The ETA might be blank if the vessel is yet to depart or due to
+              unforeseen delays. We update ETAs as soon as information is
+              available.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openTab(event, sectionId) {
+        var i, content, tablinks;
+
+        content = document.getElementsByClassName("content");
+        for (i = 0; i < content.length; i++) {
+          content[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        document.getElementById(sectionId).style.display = "block";
+        event.currentTarget.className += " active";
+      }
+
+      function toggleAnswer(event) {
+        var answer = event.target.nextElementSibling;
+        if (answer.style.display === "block") {
+          answer.style.display = "none";
+        } else {
+          answer.style.display = "block";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var generalLinks = document.querySelectorAll(".general-info a");
+        generalLinks.forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            var sectionId = link.getAttribute("href").substring(1);
+            openTab(event, sectionId);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

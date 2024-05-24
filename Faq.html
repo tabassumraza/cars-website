@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AA Japan FAQ</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dropdown.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        color: #000000;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-around;
+        background-color: #d32f2f;
+        padding: 10px;
+        width: 100%;
+      }
+
+      .navbar button {
+        background-color: #d32f2f;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      .navbar button:hover {
+        background-color: #c12727;
+      }
+
+      .navbar button.active {
+        background-color: #b12727;
+      }
+
+      .content {
+        display: none;
+        margin-top: 20px;
+        width: 60%;
+      }
+
+      .content.active {
+        display: block;
+      }
+
+      .general-info {
+        margin-top: 20px;
+        width: 40%;
+        padding-left: 20px;
+        border-left: 1px solid #ddd;
+      }
+
+      .languages span {
+        display: inline-block;
+        background-color: #eee;
+        padding: 5px 10px;
+        margin: 5px;
+        border-radius: 3px;
+        background-color: #d32f2f;
+        color: white;
+      }
+
+      .general-info ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .general-info ul li {
+        padding: 5px 0;
+      }
+
+      .general-info a {
+        color: #d32f2f;
+        text-decoration: none;
+      }
+
+      .general-info a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .navbar button {
+          margin-bottom: 5px;
+          width: 100%;
+        }
+
+        .content,
+        .general-info {
+          width: 100%;
+          padding: 0;
+          margin: 0;
+        }
+
+        .general-info {
+          border-left: none;
+          padding-top: 20px;
+        }
+      }
+
+      .question {
+        cursor: pointer;
+        color: #d32f2f;
+        margin: 10px 0;
+        font-weight: bold;
+      }
+
+      .answer {
+        display: none;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse navigation"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav">
+            <a class="nav-link active" href="index.php">Home</a>
+            <a class="nav-link" href="countries.php">Countries</a>
+            <a class="nav-link" href="process.php">Process</a>
+            <a class="nav-link" href="news.php">news</a>
+            <a class="nav-link" href="recent-export.php">Recent </a>
+
+            <div class="dropdown nav-link">
+              <button class="dropbtn">How to Buy</button>
+              <div class="dropdown-content">
+                <a class="nav-link" href="howtobuy.php">How To Buy </a>
+                <a class="nav-link" href="paybypaypal.php">Pay by Paypal </a>
+                <a class="nav-link" href="Faq.html">FAQ </a>
+                <a class="nav-link" href="Bank details.html">Bank Details </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="contactus.php">
+          <button class="nav-button">contact us</button></a
+        >
+      </div>
+    </nav>
+    <div class="container">
+      <div class="navbar">
+        <button class="tablink active" onclick="openTab(event, 'FAQ')">
+          FAQ
+        </button>
+        <a href="VehiclesAndStock.html">
+          <button class="tablink">Vehicles & Stocks</button></a
+        >
+        <a href="Payment.html"> <button class="tablink">Payment</button></a>
+        <a href="shipping.html"> <button class="tablink">Shipping</button></a>
+        <a href="documents.html"> <button class="tablink">Documents</button></a>
+        <a href="glossary.html"> <button class="tablink">Glossary</button></a>
+      </div>
+
+      <div class="content-section">
+        <div id="FAQ" class="content active">
+          <h2>FAQ</h2>
+          <div id="VehiclesAndStockFAQ" class="faq-section">
+            <h3>Vehicles & Stock</h3>
+            <p class="question" onclick="toggleAnswer(event)">
+              What is the difference between fob, CIF and C&F (CFR) prices?
+            </p>
+            <p class="answer">
+              FOB stands for Free on Board, CIF stands for Cost, Insurance, and
+              Freight, and C&F (CFR) stands for Cost and Freight. These terms
+              define who is responsible for the goods at various points during
+              shipping.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              Can I ask for vehicles not listed in your stock?
+            </p>
+            <p class="answer">
+              Yes, you can make special requests for vehicles not listed in our
+              stock. Please contact our sales team for more details.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              What does "Reserved" mean?
+            </p>
+            <p class="answer">
+              "Reserved" means that the vehicle is on hold for a customer who
+              has expressed a definite interest in purchasing it.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              Can I see the vehicles physically?
+            </p>
+            <p class="answer">
+              Yes, you can visit our location to see the vehicles physically.
+              Please make an appointment in advance.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              Do you provide spare keys?
+            </p>
+            <p class="answer">
+              Spare keys are provided if available. Please check the vehicle
+              details or ask our sales team.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              Why do some stocks don't have pictures?
+            </p>
+            <p class="answer">
+              Some stocks might not have pictures due to recent arrival or
+              pending inspection. We strive to upload pictures as soon as
+              possible.
+            </p>
+          </div>
+
+          <div id="PaymentFAQ" class="faq-section">
+            <h3>Payment</h3>
+            <p class="question" onclick="toggleAnswer(event)">
+              What is a proforma invoice?
+            </p>
+            <p class="answer">
+              A proforma invoice is a preliminary bill of sale sent to buyers in
+              advance of a shipment or delivery of goods.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              What form of payment do you accept?
+            </p>
+            <p class="answer">
+              We accept bank transfers, PayPal, and credit card payments.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              How soon should I make a payment for the vehicle I reserved?
+            </p>
+            <p class="answer">
+              Payments should be made within 7 days of reservation to secure the
+              vehicle.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              What currencies do you accept?
+            </p>
+            <p class="answer">We accept payments in USD, EUR, and JPY.</p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              Can I cancel an order after it has been shipped?
+            </p>
+            <p class="answer">
+              Cancellations are not allowed after shipment. Please contact us
+              immediately if you need to cancel an order before it is shipped.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              How long does it take for AA Japan to receive my payment?
+            </p>
+            <p class="answer">
+              It usually takes 2-3 business days for us to receive your payment,
+              depending on the bank and payment method used.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              Who will pay the bank transfer fees?
+            </p>
+            <p class="answer">
+              Bank transfer fees are the responsibility of the buyer. Please
+              ensure that the full invoice amount is received by AA Japan.
+            </p>
+          </div>
+
+          <div id="ShippingFAQ" class="faq-section">
+            <h3>Shipping</h3>
+            <p class="question" onclick="toggleAnswer(event)">
+              What information are needed to start the shipping process?
+            </p>
+            <p class="answer">
+              We need the consignee details, delivery address, and any specific
+              instructions related to the shipment.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              Are pre-export inspections required?
+            </p>
+            <p class="answer">
+              Yes, pre-export inspections are required for certain countries.
+              Please check with your local authorities for specific
+              requirements.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              How long does it takes for the shipping vessel to reach the port
+              of discharge?
+            </p>
+            <p class="answer">
+              Shipping time varies depending on the destination. It usually
+              takes between 2 to 8 weeks.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              How can I get information regarding my shipping?
+            </p>
+            <p class="answer">
+              You will receive updates via email, and you can also track the
+              shipment on our website.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              Is there any possibility that the shipping schedule will change?
+            </p>
+            <p class="answer">
+              Yes, shipping schedules can change due to various factors like
+              weather conditions or port congestion.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              Why is the shipping vessel's ETA blank?
+            </p>
+            <p class="answer">
+              The ETA might be blank if the vessel is yet to depart or due to
+              unforeseen delays. We update ETAs as soon as information is
+              available.
+            </p>
+          </div>
+
+          <div id="DocumentsFAQ" class="faq-section">
+            <h3>Documents</h3>
+            <p class="question" onclick="toggleAnswer(event)">
+              What documents are needed for clearing customs?
+            </p>
+            <p class="answer">
+              Typically, you need the bill of lading, invoice, export
+              certificate, and any required inspection certificates.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              How long does it take to receive the shipping documents?
+            </p>
+            <p class="answer">
+              Shipping documents are sent within 3-5 business days after the
+              vessel's departure.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              What is an export certificate?
+            </p>
+            <p class="answer">
+              An export certificate is an official document that certifies the
+              vehicle is allowed to leave the country of origin.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              What is a bill of lading?
+            </p>
+            <p class="answer">
+              A bill of lading is a document issued by a carrier to acknowledge
+              receipt of cargo for shipment.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              Who receives the original export certificate?
+            </p>
+            <p class="answer">
+              The original export certificate is sent to the buyer or their
+              nominated agent for customs clearance.
+            </p>
+
+            <p class="question" onclick="toggleAnswer(event)">
+              What should I do if I lose the documents?
+            </p>
+            <p class="answer">
+              Contact us immediately if you lose any documents. We will assist
+              you in obtaining copies or replacements.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="general-info">
+        <h3>General Information</h3>
+        <ul>
+          <li><a href="#VehiclesAndStockFAQ">Vehicles & Stock</a></li>
+          <li><a href="#PaymentFAQ">Payment</a></li>
+          <li><a href="#ShippingFAQ">Shipping</a></li>
+          <li><a href="#DocumentsFAQ">Documents</a></li>
+          <li><a href="#GlossaryFAQ">Glossary</a></li>
+        </ul>
+        <h3>Business Languages</h3>
+        <div class="languages">
+          <span>English</span>
+          <span>Français</span>
+          <span>Español</span>
+          <span>中文</span>
+          <span>Русский</span>
+          <span>العربية</span>
+        </div>
+        <div id="GlossaryFAQ" class="faq-section">
+          <h3>Glossary</h3>
+          <p class="question" onclick="toggleAnswer(event)">FOB</p>
+          <p class="answer">
+            Free On Board: the seller pays for transportation of the goods to
+            the port of shipment, plus loading costs. The buyer pays for all
+            costs beyond that point.
+          </p>
+
+          <p class="question" onclick="toggleAnswer(event)">CIF</p>
+          <p class="answer">
+            Cost, Insurance, and Freight: the seller pays for the cost of goods,
+            insurance, and freight to the port of destination. The buyer pays
+            for unloading and other costs incurred after the goods arrive at the
+            destination port.
+          </p>
+
+          <p class="question" onclick="toggleAnswer(event)">CFR</p>
+          <p class="answer">
+            Cost and Freight: the seller pays for the cost of goods and freight
+            to the port of destination. The buyer pays for insurance and
+            unloading costs.
+          </p>
+
+          <p class="question" onclick="toggleAnswer(event)">Bill of Lading</p>
+          <p class="answer">
+            A document issued by a carrier to acknowledge receipt of cargo for
+            shipment.
+          </p>
+
+          <p class="question" onclick="toggleAnswer(event)">
+            Export Certificate
+          </p>
+          <p class="answer">
+            An official document that certifies the vehicle is allowed to leave
+            the country of origin.
+          </p>
+
+          <p class="question" onclick="toggleAnswer(event)">ETA</p>
+          <p class="answer">
+            Estimated Time of Arrival: the estimated date and time when a vessel
+            or shipment is expected to arrive at a port or destination.
+          </p>
+
+          <p class="question" onclick="toggleAnswer(event)">
+            Import Regulation
+          </p>
+          <p class="answer">
+            Import Regulation: laws and regulations governing the import of
+            goods into a country, including tariffs, restrictions, and
+            documentation requirements.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openTab(event, sectionId) {
+        var i, content, tablinks;
+
+        content = document.getElementsByClassName("content");
+        for (i = 0; i < content.length; i++) {
+          content[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        document.getElementById(sectionId).style.display = "block";
+        event.currentTarget.className += " active";
+      }
+
+      function toggleAnswer(event) {
+        var answer = event.target.nextElementSibling;
+        if (answer.style.display === "block") {
+          answer.style.display = "none";
+        } else {
+          answer.style.display = "block";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var generalLinks = document.querySelectorAll(".general-info a");
+        generalLinks.forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            var sectionId = link.getAttribute("href").substring(1);
+            openTab(event, sectionId);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

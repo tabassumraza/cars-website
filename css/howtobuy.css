@@ -1,0 +1,115 @@
+.main-div{
+    width: 100%;
+    height: 1100px;
+    /* background-color: aqua; */
+
+}
+.container-ht{
+    
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        /* background-color: brown; */
+    }
+    div.border-red-top {
+        border-top: 2px solid #d01b19;
+    }
+    
+    .pb-4 {
+        padding-bottom: 1.5rem;
+    }
+    .pt-4 {
+        padding-top: 1.5rem;
+    }
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    div {
+        display: block;
+        unicode-bidi: isolate;
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        /* background-color: blue; */
+    }
+    .mb-3 {
+        margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+        .col-md-12 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            text-align: center;
+            /* background-color: antiquewhite; */
+        }
+    }
+    @media (min-width: 768px) {
+        .col-md-9 {
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+    }
+    .number-list {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        list-style-type: auto;
+        padding-inline-start: 40px;
+    }
+    /* ICCON  */
+    .mb-2 {
+        margin-bottom: 0.5rem;
+    }
+    
+    .justify-content-center {
+        justify-content: center;
+    }
+    .d-flex {
+        display: flex;
+    }
+    @media (min-width: 768px) {
+        .col-md-3 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+    }
+    .align-items-center {
+        align-items: center;
+    }
+    
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    .howtobuy-icon {
+        width: 100px;
+        height: 100px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        background: #d01b19;
+        border-radius: 50%;
+        color: #fff;
+    }
+    
+    div.howtobuy-icon i {
+        font-size: 70px;
+    }
+    
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    user agent stylesheet
+    i {
+        font-style: italic;
+    }

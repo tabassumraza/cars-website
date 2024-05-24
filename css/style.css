@@ -1,0 +1,614 @@
+.main-header {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.head-img {
+    width: 100%;
+    height: 600px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-button {
+    background-color: rgb(228, 119, 119);
+    display: flex;
+    justify-content: end;
+    color: white;
+    border: none;
+    height: 30px;
+}
+
+.top-left {
+    position: absolute;
+    top: 150px;
+    left: 25px;
+    text-align: left;
+    font-size: larger;
+}
+
+.card-block {
+    height: 500px;
+    transition: all 0.2s ease-in-out !important;
+    border-radius: 24px;
+}
+
+.slider div {
+    height: 400px;
+    width: 300px;
+    margin-left: 1%;
+    border-radius: 7%;
+
+}
+
+.slider img {
+    width: 300px;
+    height: 400px;
+    border-radius: 7%;
+}
+
+.centered {
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+
+.third-section {
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+
+.third1,
+.third2,
+.third3 {
+    width: 33%;
+    height: 300px;
+    margin: auto;
+
+}
+
+.contentABOT {
+    bottom: 150;
+    /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0);
+    /* Fallback color */
+    background: rgba(0, 0, 0, 0.5);
+    /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    /* Grey text */
+    width: 100%;
+    /* Full width */
+    height: 300PX;
+    padding: 20px;
+    /* Some padding */
+}
+
+/* .third1{
+    background-color: ;
+}
+.third2{
+    background-color:bisque;
+}
+.third3{
+    background-color: bisque;
+} */
+.second-section {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    border: 1px solid;
+    margin-top: 5%;
+}
+
+.second1,
+.second2,
+.second3,
+.second4 {
+    width: 20%;
+    height: 150px;
+    margin: auto;
+    font-size: smaller;
+}
+
+/* .second1{
+    background-color: bisque;
+    }
+    .second2{
+     background-color: rgb(237, 137, 16);
+    }
+    .second3{
+    background-color: bisque;
+    }
+    .second4{
+    background-color: rgb(232, 133, 12);
+    } */
+.forth {
+    width: 100%;
+    height: 500px;
+    background-color: blue;
+    display: flex;
+}
+
+.about-us {
+    width: 50%;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    font-size: larger;
+}
+
+.testimonals {
+    width: 50%;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    font-size: larger;
+}
+
+.getintouch {
+    width: 100%;
+    height: 300px;
+}
+
+.centertextgetintouch {
+    position: absolute;
+    top: 150px;
+    left: 425px;
+    text-align: left;
+    font-size: larger;
+
+}
+
+.container {
+    border: none;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    margin: auto;
+    display: inline-block;
+}
+
+.fifth {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.ourlatest {
+    position: absolute;
+    text-align: left;
+    font-size: larger;
+}
+
+.sixth {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    color: #000;
+    margin-top: 0%;
+    margin-bottom: 10%;
+}
+
+.latest {
+    color: #000;
+    padding-right: 70%;
+    width: 100%;
+}
+
+.box-img {
+    width: 100%;
+    height: 500px;
+    border-radius: 30px;
+}
+
+.box-1,
+.box-2,
+.box-3 {
+    width: 33%;
+    height: 500px;
+    margin-top: 0;
+    margin: auto;
+    text-align: left;
+}
+
+
+.readmore {
+    border-color: #dddddd;
+    color: rgb(221, 0, 0);
+    width: 30%;
+    height: 40px;
+    box-shadow: 2px 2px 2px lightgrey;
+    cursor: pointer;
+    font-size: large;
+    font: center;
+
+}
+/* footer work  */
+footer {
+    width: 100%;
+    height: 700px;
+    background-color: #030229;
+}
+
+   
+  
+  .container-f {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .footer-col {
+    flex-basis: 23%;
+    padding: 10px;
+  }
+  
+  .footer-col h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #002d72; /* Dark blue color from footer*/
+  }
+  
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-col li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-col a {
+    color: #ffffff; /* Gray color from footer */
+    text-decoration: none;
+  }
+  
+  .footer-col a:hover {
+    color: #002d72; /* Dark blue color from footer*/
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-copy {
+    color: #666; /* Gray color from footer */
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+  
+  }
+.zindex {
+    width: 50;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    z-index: 10;
+
+}
+
+.zindex h4 {
+    text-align: center;
+}
+
+.one,
+.two,
+.three {
+    width: 30%;
+    height: 150px;
+    margin: auto;
+    margin-bottom: 10%;
+    background-position: left top;
+    background-repeat: repeat;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 4px 4px 4px rgb(151, 149, 149);
+}
+
+.imagecenter {
+    width: 60px;
+    height: 60px;
+
+}
+
+.last-three {
+    display: flex;
+    margin-left: 4%;
+    /* background-color: #b65050; */
+}
+
+.one {
+    background-color: rgb(255, 255, 255);
+
+}
+
+.two {
+    background-color: rgb(255, 255, 255);
+}
+
+.three {
+    background-color: rgb(255, 255, 255);
+}
+
+.footerwork {
+    align-items: center;
+    justify-content: left;
+    display: flex;
+    padding-top: 50pxpx;
+
+}
+
+/* countries css starting */
+
+.exporting {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    font-size: large;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.para {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    font-size: large;
+    text-align: center;
+    margin-top: -200px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.imageline {
+    justify-content: center;
+    display: center;
+    margin-top: -230px;
+}
+
+.countries-flag {
+    width: 100%;
+    height: 2800px;
+    background-color: rgb(219, 219, 219);
+    font-size: large;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.imageline {
+    justify-content: center;
+    display: center;
+    margin-top: -230px;
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 200px;
+    box-shadow: 4px 4px 4px darkgrey;
+
+}
+
+.textav1 {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 200px;
+}
+
+.avatar2 {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 200px;
+    box-shadow: 4px 4px 4px darkgrey;
+
+}
+
+.textav2 {
+   
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 200px;
+}
+
+.avatar3 {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 200px;
+    box-shadow: 4px 4px 4px darkgrey;
+}
+
+.textav3  {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 200px;
+}
+
+.parent {
+    display: flex;
+    /* background-color: aqua; */
+    width: 80%;
+    height: 140px;
+    margin: auto;
+}
+.parent-heading{
+    width: 80%;
+    height: 130px;
+    /* background-color: #7575a0; */
+    display: flex;
+    margin: auto;
+}
+
+/* css of process page */
+
+.top-center {
+    position: absolute;
+    top: 250px;
+    left: 40%;
+    text-align: center;
+    font-size: 5rem;
+    color: white;
+    font-family: muli, sans-serif, Helvetica, Arial, sans-serif;
+}
+
+.easy-step {
+    width: 80%;
+    height: 50px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    margin-top: 5%;
+}
+
+.easy-heading {
+    text-align: center;
+    color: #000;
+}
+
+.four-boxes {
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    /* background-color: rgb(245, 10, 10); */
+    display: flex;
+    margin-top: 5%;
+    color: #000;
+    text-align: center;
+    font-size: 9rem;
+
+}
+
+.boxes-1,
+.boxes-2,
+.boxes-3,
+.boxes-4 {
+    width: 20%;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    border-bottom-style: solid;
+    border-color: red;
+
+}
+
+.three-boxes {
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    /* background-color: rgb(38, 210, 107); */
+    display: flex;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    color: #000;
+    text-align: center;
+    font-size: 9rem;
+
+}
+
+.boxes-5,
+.boxes-6,
+.boxes-7 {
+    width: 20%;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    border-bottom-style: solid;
+    border-color: red;
+}
+
+
+/* contact-us css  */
+
+.con-head-div {
+    width: 100%;
+    height: 150px;
+    margin-top: 5%;
+
+}
+
+.contact-heading {
+    width: 100%;
+    height: 100px;
+    font-size: 90px;
+    font-weight: 700;
+    /* background-color: aqua; */
+    color: #010133;
+    font-family: muli, sans-serif, Helvetica, Arial, sans-serif;
+
+}
+
+.contact-main {
+    width: 60%;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 37%;
+    margin-bottom: 5%;
+    border-radius: 3%;
+}
+
+.location {
+    width: 100%;
+    height: 400px;
+    background-color: antiquewhite;
+}
+
+/* viewallexports */
+
+.four-boxess {
+    width: 100%;
+    height: 1000px;
+    margin: auto;
+    /* background-color: rgb(245, 10, 10); */
+    display: flex;
+    margin-top: 5%;
+    color: #000;
+    text-align: center;
+    font-size: 9rem;
+}
+
+.box-1v,
+.box-2v,
+.box-3v {
+    width: 33%;
+    height: 500px;
+    margin-top: 0;
+    margin: auto;
+    text-align: left;
+    padding: auto;
+}
+
+
+
+
+
+
