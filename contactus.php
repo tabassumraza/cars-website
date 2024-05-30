@@ -168,6 +168,7 @@
                                         <div class="col-5">
                                             <h2 class="steps">Step 1 - 4</h2>
                                         </div>
+                                    </div>
                                         <select class="countrydropdown" aria-required="true" aria-invalid="false" name="menu-country-dropdown">
                                             <option value="">To which country do you want the vehicle to be shipped?
                                             </option>
