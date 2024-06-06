@@ -131,7 +131,326 @@
         margin-left: 20px;
       }
     </style>
-  </head>
+  </head><!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>AutoWings International Ltd FAQ</title>
+  
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #ffffff;
+          color: #000000;
+        }
+  
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+          display: flex;
+          flex-wrap: wrap;
+        }
+  
+        .navbar {
+          display: flex;
+          justify-content: space-around;
+          background-color: #d32f2f;
+          padding: 10px;
+          width: 100%;
+        }
+  
+        .navbar button {
+          background-color: #d32f2f;
+          color: white;
+          padding: 10px;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background-color 0.3s;
+        }
+  
+        .navbar button:hover {
+          background-color: #c12727;
+        }
+  
+        .navbar button.active {
+          background-color: #b12727;
+        }
+  
+        .content {
+          display: none;
+          margin-top: 20px;
+          width: 60%;
+        }
+  
+        .content.active {
+          display: block;
+        }
+  
+        .general-info {
+          margin-top: 20px;
+          width: 40%;
+          padding-left: 20px;
+          border-left: 1px solid #ddd;
+        }
+  
+        .languages span {
+          display: inline-block;
+          background-color: #eee;
+          padding: 5px 10px;
+          margin: 5px;
+          border-radius: 3px;
+          background-color: #d32f2f;
+          color: white;
+        }
+  
+        .general-info ul {
+          list-style-type: none;
+          padding: 0;
+        }
+  
+        .general-info ul li {
+          padding: 5px 0;
+        }
+  
+        .general-info a {
+          color: #d32f2f;
+          text-decoration: none;
+        }
+  
+        .general-info a:hover {
+          text-decoration: underline;
+        }
+  
+        @media (max-width: 768px) {
+          .navbar {
+            flex-direction: column;
+            align-items: center;
+          }
+  
+          .navbar button {
+            margin-bottom: 5px;
+            width: 100%;
+          }
+  
+          .content,
+          .general-info {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+          }
+  
+          .general-info {
+            border-left: none;
+            padding-top: 20px;
+          }
+        }
+  
+        .question {
+          cursor: pointer;
+          color: #d32f2f;
+          margin: 10px 0;
+          font-weight: bold;
+        }
+  
+        .answer {
+          display: none;
+          margin-left: 20px;
+        }
+        .footer {
+          background-color: #030241;
+        }
+  
+        .footer .box-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          color: #030241;
+        }
+  
+        .footer .box {
+          flex: 1 1 25%;
+          max-width: 20%;
+          background: #030241;
+        }
+  
+        .footer .box h3 {
+          color: #fff;
+          font-size: 2.5rem;
+          padding: 1rem 0;
+        }
+  
+        .footer .box a {
+          color: #fff;
+          font-size: 2.5rem;
+          padding: 1rem 0;
+          display: block;
+        }
+  
+        .footer .box a:hover {
+          color: #ef4b3f;
+          text-decoration: underline;
+        }
+  
+        .footer .box img {
+          margin-top: 1rem;
+        }
+  
+        .footer .credit {
+          text-align: center;
+          padding: 1.5rem;
+          margin-top: 1.5rem;
+          padding-top: 2.5rem;
+          font-size: 2rem;
+          color: #fff;
+          border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+        }
+  
+        .footer .credit span {
+          color: #ef4b3f;
+        }
+  
+        .footer .box a {
+          font-size: small;
+        }
+  
+        .footer .box h3 {
+          font-size: 1.8rem;
+          margin: 0;
+        }
+  
+        .footer .box a {
+          padding: 0.5rem 0;
+          text-decoration: none;
+          transition: color 0.3s;
+        }
+  
+        .footer .credit {
+          font-size: 1.6rem;
+          padding: 1.5rem;
+          margin-top: 1.5rem;
+          color: #555555;
+          border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+        }
+  
+        .footer .credit span {
+          color: #ef4b3f;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="navbar">
+          <a href="Faq.html"> <button class="tablink">FAQ</button></a>
+          <a href="VehiclesAndStock.html">
+            <button class="tablink">Vehicles & Stocks</button></a
+          >
+          <a href="Payment.html"> <button class="tablink">Payment</button></a>
+          <a href="shipping.html"> <button class="tablink">Shipping</button></a>
+          <a href="documents.html"> <button class="tablink">Documents</button></a>
+          <a href="glossary.html"> <button class="tablink">Glossary</button></a>
+        </div>
+  
+        <div class="content-section">
+          <div id="FAQ" class="content active">
+            <h2>FAQ</h2>
+            <div id="Documents" class="faq-section">
+              <h3>Documents</h3>
+              
+              <p class="question" onclick="toggleAnswer(event)">What documents are needed for clearing customs?</p>
+              <p class="answer">Typically, you need the bill of lading, invoice, and any required inspection certificates.</p>
+  
+              <p class="question" onclick="toggleAnswer(event)">How long does it take to receive the shipping documents?</p>
+              <p class="answer">Shipping documents are sent within 10-15 business days after the vessel's departure.</p>
+  
+              <p class="question" onclick="toggleAnswer(event)">What is a bill of lading?</p>
+              <p class="answer">A bill of lading is a document issued by a carrier to acknowledge receipt of cargo for shipment.</p>
+  
+              <p class="question" onclick="toggleAnswer(event)">What should I do if I lose the documents?</p>
+              <p class="answer">Contact us immediately if you lose any documents. We will assist you in obtaining copies or replacements.</p>
+          </div>
+          </div>
+        </div>
+      </div>
+  
+      
+      <div class="footer">
+        <div class="box-container">
+          <div class="box">
+            <h3a class="navbar-brand" href="#"><img src="./images/Autowings logo1.png" width="300" height="300"/></a>>AutoWings Ltd</h3>
+          </div>
+          <div class="box">
+            <h3>Contact Us</h3>
+            <a href="index.php">Home</a>
+            <a href="Faq.html">FAQ</a>
+            <a href="recent-export.php">Recent Stocks</a>
+          </div>
+          <div class="box">
+            <h3>Location</h3>
+            <a href="#">Trinidad</a>
+            <a href="#">Africa</a>
+            <a href="#">Guyana</a>
+            <a href="#">Jamaica</a>
+            <a href="#">Bahamas</a>
+            <a href="#">Barbados</a>
+          </div>
+          <div class="box">
+            <h3>Contact Us</h3>
+            <a href="#">info@autowingsint.com</a>
+            <a href="#">+1234567890</a>
+            <a href="#">UK</a>
+          </div>
+        </div>
+        <div class="credit">
+          <p>© 2023 AutoWings International Ltd. All rights reserved. | Designed by <span>AutoWings</span></p>
+        </div>
+      </div>
+  
+      <script>
+        function openTab(event, sectionId) {
+          var i, content, tablinks;
+  
+          content = document.getElementsByClassName("content");
+          for (i = 0; i < content.length; i++) {
+            content[i].style.display = "none";
+          }
+  
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+  
+          document.getElementById(sectionId).style.display = "block";
+          event.currentTarget.className += " active";
+        }
+  
+        function toggleAnswer(event) {
+          var answer = event.target.nextElementSibling;
+          if (answer.style.display === "block") {
+            answer.style.display = "none";
+          } else {
+            answer.style.display = "block";
+          }
+        }
+  
+        document.addEventListener("DOMContentLoaded", function () {
+          var generalLinks = document.querySelectorAll(".general-info a");
+          generalLinks.forEach(function (link) {
+            link.addEventListener("click", function (event) {
+              event.preventDefault();
+              var sectionId = link.getAttribute("href").substring(1);
+              openTab(event, sectionId);
+            });
+          });
+        });
+      </script>
+    </body>
+  </html>
+  
   <body>
     <nav class="navbar navbar-expand-lg bg-body">
       <div class="container-fluid">
