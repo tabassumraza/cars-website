@@ -1,70 +1,159 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer</title>
-    <link href="css/style.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer</title>
+  <style>
+    @media (max-width: 768px) {
+     .navbar {
+       flex-direction: column;
+       align-items: center;
+     }
 
+     .navbar button, .dropdown button {
+       margin-bottom: 5px;
+       width: 100%;
+     }
+
+     .content,
+     .general-info {
+       width: 100%;
+       padding: 0;
+       margin: 0;
+     }
+
+     .general-info {
+       border-left: none;
+       padding-top: 20px;
+     }
+   }
+
+   .question {
+     cursor: pointer;
+     color: #d32f2f;
+     margin: 10px 0;
+     font-weight: bold;
+   }
+
+   .answer {
+     display: none;
+     margin-left: 20px;
+   }
+
+   .footer {
+     background-color: #030241;
+   }
+
+   .footer .box-container {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     color: #030241;
+   }
+
+   .footer .box {
+     flex: 1 1 25%;
+     max-width: 20%;
+     background: #030241;
+   }
+
+   .footer .box h3 {
+     color: #fff;
+     font-size: 2.5rem;
+     padding: 1rem 0;
+   }
+
+   .footer .box a {
+     color: #fff;
+     font-size: 2.5rem;
+     padding: 1rem 0;
+     display: block;
+   }
+
+   .footer .box a:hover {
+     color: #ef4b3f;
+     text-decoration: underline;
+   }
+
+   .footer .box img {
+     margin-top: 1rem;
+   }
+
+   .footer .credit {
+     text-align: center;
+     padding: 1.5rem;
+     margin-top: 1.5rem;
+     padding-top: 2.5rem;
+     font-size: 2rem;
+     color: #fff;
+     border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+   }
+
+   .footer .credit span {
+     color: #ef4b3f;
+   }
+
+   .footer .box a {
+     font-size: small;
+   }
+
+   .footer .box h3 {
+     font-size: 1.8rem;
+     margin: 0;
+   }
+
+   .footer .box a {
+     padding: 0.5rem 0;
+     text-decoration: none;
+     transition: color 0.3s;
+   }
+
+   .footer .credit {
+     font-size: 1.6rem;
+     padding: 1.5rem;
+     margin-top: 1.5rem;
+     color: #555555;
+     border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+   }
+
+   .footer .credit span {
+     color: #ef4b3f;
+   }
+</style>
 </head>
 <body>
-    <footer>
-        <div class="container-f">
-          <div class="footer-top">
-            <div class="footer-col">
-              <h3>Stock</h3>
-              <ul>
-                <li><a href="#">By Country</a></li>
-                <li><a href="#">By Maker</a></li>
-                <li><a href="#">By Category</a></li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h3>How To Buy</h3>
-              <ul>
-                <li><a href="#">Buying Process</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Blog</a></li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h3>Payment Methods</h3>
-              <ul>
-                <li><a href="#">BANK TRANSFER</a></li>
-                <li><a href="#">PayPal</a></li>
-                <li><a href="#">CREDIT CARD</a></li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h3>Contact Us Now</h3>
-              <ul>
-                <li><a href="#">Tel: +81 45 594 0507</a></li>
-                <li><a href="#">Fax: +81 45 594 0508</a></li>
-                <li><a href="#">Email ID: info@aajapancars.com</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-bottom">
-            <div class="footer-copy">
-              <p>© 2024 Auto Wings (PVT) Ltd.</p>
-            </div>
-            <div class="footer-links">
-              <ul>
-                <li><a href="#">The Company</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Oversea Offices</a></li>
-                <li><a href="#">Accreditations</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Conditions of Use</a></li>
-                <li><a href="#">Privacy Notice</a></li>
-              </ul>
-            </div>
-            <div class="footer-logo">
-              <img src="logo.png" alt="AA Japan Logo">
-            </div>
-          </div>
-        </div>
-      </footer>
-      
+  <div class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3a class="navbar-brand" href="#"><img src="./images/Autowings logo1.png" width="300" height="300"/></a>>AutoWings Ltd</h3>
+      </div>
+      <div class="box">
+        <h3>Contact Us</h3>
+        <a href="index.php">Home</a>
+        <a href="Faq.html">FAQ</a>
+        <a href="recent-export.php">Recent Stocks</a>
+      </div>
+      <div class="box">
+        <h3>Location</h3>
+        <a href="#">Trinidad</a>
+        <a href="#">Africa</a>
+        <a href="#">Guyana</a>
+        <a href="#">Jamaica</a>
+        <a href="#">Bahamas</a>
+        <a href="#">Barbados</a>
+      </div>
+      <div class="box">
+        <h3>Contact Us</h3>
+        <a href="#">info@autowingsint.com</a>
+        <a href="#">+1234567890</a>
+        <a href="#">UK</a>
+      </div>
+    </div>
+    <div class="credit">
+      <p>© 2023 AutoWings International Ltd. All rights reserved. | Designed by <span>AutoWings</span></p>
+    </div>
+  </div>
 </body>
 </html>
